@@ -42,8 +42,47 @@
 <script>
 	$(function(){
 
-		$(".login_btn_yzm").click(function(){
-			$.ajax({})
+
+		$(".login_btn_yzm").click(function () {
+			var usesname = "";
+			usesname = $("#uesrName")[0].value;
+			if (usesname == "") {
+				alert("请输入号码");
+				return;
+			}
+			if (usesname.length != 11) {
+				alert("请输入正确的号码");
+				return;
+			}
+			if (!(/(^[1-9]\d*$)/.test(usesname))) {
+				alert("请输入正确的号码");
+				return;
+			}
+			$.ajax({
+				url: "http://192.168.111.229:8080/keepCar1/H5entry/getCode?mobile=" + usesname,
+				async: true,
+//            data:{"mobile":18956564593},
+				dataType: 'JSON',//加入这个选项即可
+				type: "GET",
+				contentType: "application/json; charset=utf-8",
+				jsonp: 'jsoncallback',
+				success: function (data) {
+//                    alert("success");
+//                    alert("respons-result" + JSON.stringify(data));
+					//var result = data.message;
+					// alert("     "+result);
+					//$("#div1").html("---"+data.status);
+				},
+				error: function (xhr, textStatus, errorThrown) {
+//                    alert("error:" + xhr.statusText + xhr.status);
+//                    alert("textStatus:" + textStatus);
+//                    alert("errorThrown:" + errorThrown);
+
+				}
+
+
+			})
+
 
 		});
 	});
