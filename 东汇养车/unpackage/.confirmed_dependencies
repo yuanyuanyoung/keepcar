@@ -1,0 +1,31 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/reset.css",
+      "css/common.css",
+      "js/jquery-1.7.2.min.js",
+      "js/jquery.flexslider-min.js",
+      "js/common.js",
+      "img/img_1.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "login.html": {
+    "href": "login.html",
+    "resources": [
+      "css/reset.css",
+      "css/common.css",
+      "js/jquery-1.7.2.min.js",
+      "js/common.js",
+      "img/logo.png",
+      "img/icon_1.png",
+      "img/icon_2.png"
+    ],
+    "refer": [
+      "index.html"
+    ],
+    "priority": 0
+  }
+}

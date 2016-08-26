@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+   	<link href="css/mobiscroll_date.css" rel="stylesheet" />
+   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+   	<script src="js/mobiscroll_date.js" type="text/javascript" charset="gb2312"></script> 
+	<script src="js/mobiscroll.js" type="text/javascript"></script> 
+   	<script src="js/common.js" type="text/javascript"></script>
+    <title>添加养车记录</title>
+    
+</head>
+<body style="padding-bottom:180px;">
+	<div class="common_head_block">
+		<a onclick="history.go(-1)" class="head_icon_back"><img src="img/icon_26.png" alt="后退" class="icon_26"/></a>
+		<span class="title_name">添加养车记录</span>
+	</div>
+	
+	<ul class="service_msg_ul">
+		<li>
+			<a href="javascript:void(0);">
+				服务时间
+				<span class="service_msg_left">
+					<img src="img/icon_17.png" class="icon_17_2" />
+					<input type="text" name="USER_AGE" id="car_num" class="input_carDate_2" placeholder="选择预约时间" style="width:auto;" />
+				</span>
+			</a>
+		</li>
+		<li>
+			<a href="综合服务.html">
+				服务类别
+				<span class="service_msg_left">
+					点击选择
+					<img src="img/icon_17.png" class="icon_17_2" />
+				</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)">
+				服务金额
+				<span class="service_msg_left" style="text-align:right;">
+					<input type="text" class="input_car_price" />
+					元
+				</span>
+			</a>
+		</li>
+		<li style="border:none;">
+			<a href="javascript:void(0)">
+				服务描述
+				<textarea class="service_textarea" placeholder="选填,点击可输入,最多20个字"></textarea>
+			</a>
+		</li>
+	</ul>
+	
+	<button class="clgl_btn_addCar">完成</button>
+	
+
+	
+	<br />
+	<br />
+	<br />
+	<br />
+	
+<script type="text/javascript">
+	$(function () {
+		var currYear = (new Date()).getFullYear();	
+		var opt={};
+		opt.date = {preset : 'date'};
+		opt.datetime = {preset : 'datetime'};
+		opt.time = {preset : 'time'};
+		opt.default = {
+			theme: 'android-ics light', //皮肤样式
+			display: 'modal', //显示方式 
+			mode: 'scroller', //日期选择模式
+			dateFormat: 'yyyy-mm-dd',
+			lang: 'zh',
+			display:'bottom',
+			startYear: currYear - 50, //开始年份
+			endYear: currYear + 10 //结束年份
+		};
+	
+		$("#car_num").mobiscroll($.extend(opt['datetime'], opt['default']));	
+	
+	});
+</script>	
+</body>
+</html>

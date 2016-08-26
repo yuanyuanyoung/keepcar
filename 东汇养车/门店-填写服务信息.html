@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+   	<link href="css/mobiscroll_date.css" rel="stylesheet" />
+   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+   	<script src="js/mobiscroll_date.js" type="text/javascript" charset="gb2312"></script> 
+	<script src="js/mobiscroll.js" type="text/javascript"></script> 
+   	<script src="js/common.js" type="text/javascript"></script>
+    <title>填写预约信息</title>
+    
+</head>
+<body style="padding-bottom:180px;">
+	<div class="common_head_block">
+		<a href="门店-服务详情.html" class="head_icon_back"><img src="img/icon_26.png" alt="后退" class="icon_26"/></a>
+		<span class="title_name">填写预约信息</span>
+	</div>
+	
+	<div class="service_detail_block" style="border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;">
+        <div class="write_service_box">
+        	<h1>服务门店及项目</h1>
+        	<div class="write_service_msg_block">
+				<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+				<div class="zjdmd_word">
+					<p class="zjdmd_name">东汇快修苏客加盟店（河西分店）</p>
+					<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+				</div>
+				<img src="img/icon_17.png" class="icon_17_3" />
+				<div class="clearfloat"></div>
+			</div>
+			
+        </div>
+        <div class="service_write_block">
+        	<span class="service_write_name">服务费用</span>
+        	<div class="write_service_price">
+        		<p class="service_price_num_2">¥ 600.00</p>
+        	</div>
+        	<div class="clearfloat"></div>
+        </div>
+    </div>
+	
+	<ul class="service_msg_ul">
+		<li><a href="#">服务车辆<span class="service_msg_left">选择车辆<img src="img/icon_17.png" class="icon_17_2" /></span></a></li>
+		<li style="border:none;"><a href="javascript:void(0);">服务时间<span class="service_msg_left"><img src="img/icon_17.png" class="icon_17_2" /><input type="text" name="USER_AGE" id="car_num" class="input_carDate_2" placeholder="选择预约时间" /></span></a></li>
+	</ul>
+	
+	<p class="service_notice">请于预约时间准时到店，如需调整时间请联系门店重新预约</p>
+	
+	<ul class="service_msg_ul">
+		<li style="border:none;">
+			<a href="优惠券.html">
+				优惠券
+				<span class="service_yhj_notice">2张可用</span>
+				<span class="service_msg_left">未使用<img src="img/icon_17.png" class="icon_17_2" /></span>
+				<div class="clearfloat"></div>				
+			</a>
+		</li>
+	</ul>
+
+	<div class="service_msg_summary">
+		<div class="msg_summary_box">
+			<p>服务费用<span>￥600.00</span></p>
+			<p>服务优惠<span>-￥0.00</span></p>
+		</div>
+		<div class="msg_summary_buy">
+			<span class="msg_summary_name">实付款：</span>
+			<span class="msg_summary_price">￥600.00</span>
+			<button type="button" class="btn_msg_summary">提前预约</button>
+		</div>
+	</div>
+	
+	<br />
+	<br />
+	<br />
+	<br />
+	
+<script type="text/javascript">
+	$(function () {
+		var currYear = (new Date()).getFullYear();	
+		var opt={};
+		opt.date = {preset : 'date'};
+		opt.datetime = {preset : 'datetime'};
+		opt.time = {preset : 'time'};
+		opt.default = {
+			theme: 'android-ics light', //皮肤样式
+			display: 'modal', //显示方式 
+			mode: 'scroller', //日期选择模式
+			dateFormat: 'yyyy-mm-dd',
+			lang: 'zh',
+			display:'bottom',
+			startYear: currYear - 50, //开始年份
+			endYear: currYear + 10 //结束年份
+		};
+	
+		$("#car_num").mobiscroll($.extend(opt['date'], opt['default']));	
+	
+	});
+</script>	
+</body>
+</html>

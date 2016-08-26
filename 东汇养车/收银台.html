@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+   	<script src="js/common.js" type="text/javascript"></script>
+    <title>收银台</title>
+    
+</head>
+<body>
+	<div class="common_head_block">
+		<a onclick="history.go(-1)" class="head_icon_back"><img src="img/icon_26.png" alt="后退" class="icon_26"/></a>
+		<span class="title_name">收银台</span>
+	</div>
+	
+	<p class="cashier_price">订单金额<span>120元</span></p>
+	
+	<div class="cashier_pay_mode">
+		<h1>支付方式</h1>
+		<ul class="cashier_ul">
+			<li>
+				<img src="img/icon_67.png" class="icon_67" />
+				<img src="img/icon_68.png" class="icon_68" />
+				<div class="cashier_word_block">
+					<p class="cashier_name">东汇宝</p>
+					<p class="cashier_notice">推荐已在东汇宝绑定银行卡的用户使用</p>
+				</div>
+				<div class="clearfloat"></div>
+			</li>
+			<li>
+				<img src="img/icon_67.png" class="icon_67" />
+				<img src="img/icon_69.png" class="icon_68" />
+				<div class="cashier_word_block">
+					<p class="cashier_name">微信支付</p>
+					<p class="cashier_notice">推荐已在微信中绑定银行卡的用户使用</p>
+				</div>
+				<div class="clearfloat"></div>
+			</li>
+			<li>
+				<img src="img/icon_67.png" class="icon_67" />
+				<img src="img/icon_70.png" class="icon_68" />
+				<div class="cashier_word_block">
+					<p class="cashier_name">支汇宝</p>
+					<p class="cashier_notice">安全快捷，可支持银行卡支付</p>
+				</div>
+				<div class="clearfloat"></div>
+			</li>
+		</ul>
+	</div>
+	
+	<button class="clgl_btn_addCar" onclick="location.href='付款成功.html'">立即支付</button>
+	
+<script type="text/javascript">
+$(function(){
+	$('.cashier_ul > li').click(function(){
+		$('.icon_67').attr('src','img/icon_67.png');
+		$(this).find('.icon_67').attr('src','img/icon_55.png');
+	})
+})
+</script>
+</body>
+</html>
