@@ -1,114 +1,172 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
-   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-   	<script src="js/common.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
     <title>我的</title>
-    
+
+    <script>
+        $(function () {
+            var isLogin = localStorage.getItem("isLogin");
+
+            if (isLogin) {//登录判断
+                personData = JSON.parse(localStorage.getItem("personData"));
+                $("#userName").text(personData.mobile);
+                $(".my_notice_num").text(personData.count_follow);
+                $(".my_notice_coup").text(personData.count_coup);
+            } else {
+                $("#my_xiuli").hide();
+                $("#my_pay").hide();
+                $("#my_pj").hide();
+
+
+            }
+            $(".mine_notice_left").click(function () {
+                if (isLogin)
+                    location.href = '关注的门店.html';
+                else
+                    location.href = 'login.html';
+            });
+            $(".mine_notice_right").click(function () {
+                if (isLogin)
+                    location.href = '优惠券.html';
+                else
+                    location.href = 'login.html';
+            });
+            $(".my_order_list").click(function () {
+                if (isLogin)
+                    location.href = '我的-我的订单.html';
+                else
+                    location.href = '我的-我的订单.html';
+            });
+            $("#my_car_list").click(function () {
+                if (isLogin)
+                    location.href = '车辆管理.html';
+                else
+                    location.href = 'login.html';
+            });
+            $(".my_tousu").click(function () {
+                if (isLogin)
+                    location.href = '我的-意见反馈及投诉.html';
+                else
+                    location.href = 'login.html';
+            })
+
+
+        })
+
+
+    </script>
 </head>
 <body style="padding-bottom:150px;">
-	<div class="common_head_block" style="width:auto;">
-		<a href="我的-设置.html" class="car_date_bill"><img src="img/icon_56.png" class="icon_49"/></a>
-		<span class="title_name">我的</span>
-	</div>
-	
-	<div class="mine_head_block">
-		<img src="img/img_8.png" class="img_8" />
-		<div class="mine_user_box">
-			<img src="img/icon_57.png" class="icon_57" />
-			<span>15913787381</span>
-		</div>
-		<div class="mine_head_notice">
-			<div class="mine_notice_left" onclick="location.href='关注的门店.html'">
-				<p class="mine_notice_num">9</p>
-				<p class="mine_notice_store">关注的门店</p>
-			</div>
-			<div class="mine_notice_right">
-				<p class="mine_notice_num">11</p>
-				<p class="mine_notice_store">优惠券</p>
-			</div>
-			<div class="clearfloat"></div>
-		</div>
-	</div>
-	
-	
-	<div class="my_order_block">
-		<ul class="my_order_ul">
-			<li>
-				<a href="我的-我的订单.html">
-					<img src="img/icon_59.png" class="icon_59" />
-					我的订单
-					<div class="my_order_right">
-						<img src="img/icon_17.png" class="icon_17_4" />
-						<span>查看全部订单</span>						
-					</div>
-				</a>
-			</li>
-		</ul>
-		<div class="my_order_tools">
-			<ul>
-				<li><a href="#"><img src="img/icon_63.png" class="icon_63" /><p>待修理</p><span class="my_notice">2</span></a></li>
-				<li><a href="#"><img src="img/icon_64.png" class="icon_64" /><p>待付款</p></a></li>
-				<li><a href="#"><img src="img/icon_65.png" class="icon_64" /><p>待评价</p></a></li>
-			</ul>
-			<div class="clearfloat"></div>
-		</div>
-	</div>
-	
-	<div class="my_order_block">
-		<ul class="my_order_ul">
-			<li>
-				<a href="#">
-					<img src="img/icon_60.png" class="icon_60" />
-					我的车辆
-					<div class="my_order_right">
-						<img src="img/icon_17.png" class="icon_17_4" />
-						<span>共一辆</span>						
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="my_order_block">
-		<ul class="my_order_ul">
-			<li style="border-bottom:1px solid #bfbfbf;">
-				<a href="我的-意见反馈及投诉.html">
-					<img src="img/icon_61.png" class="icon_59" />
-					意见反馈与投诉
-					<div class="my_order_right">
-						<img src="img/icon_17.png" class="icon_17_4" />					
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="我的-关于我们.html">
-					<img src="img/icon_62.png" class="icon_62" />
-					关于我们
-					<div class="my_order_right">
-						<img src="img/icon_17.png" class="icon_17_4" />					
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
-	
-	
-	
-	
-	<div class="index_footer_block">
-		<ul class="index_footer_ul">
-			<li><a href="index.html"><img src="img/icon_18.png" alt="养车" class="icon_18" /><p>养车</p></a></li>
-			<li><a href="门店列表.html"><img src="img/icon_19.png" alt="门店" class="icon_19" /><p>门店</p></a></li>
-			<li><a href="养车日历.html"><img src="img/icon_20.png" alt="日历" class="icon_20" /><p>日历</p></a></li>
-			<li><a href="我的.html" class="footer_selected"><img src="img/icon_25.png" alt="我的" class="icon_21" /><p>我的</p></a></li>
-		</ul>
-		<div class="clearfloat"></div>
-	</div>
+<div class="common_head_block" style="width:auto;">
+    <a href="我的-设置.html" class="car_date_bill"><img src="img/icon_56.png" class="icon_49"/></a>
+    <span class="title_name">我的</span>
+</div>
+
+<div class="mine_head_block">
+    <img src="img/img_8.png" class="img_8"/>
+    <div class="mine_user_box">
+        <img src="img/icon_57.png" class="icon_57"/>
+        <span id="userName"></span>
+    </div>
+    <div class="mine_head_notice">
+        <div class="mine_notice_left">
+            <p id="my_notice_num" class="mine_notice_num">0</p>
+            <p class="mine_notice_store">关注的门店</p>
+        </div>
+        <div class="mine_notice_right">
+            <p id="my_notice_coup" class="mine_notice_num">0</p>
+            <p class="mine_notice_store">优惠券</p>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+</div>
+
+
+<div class="my_order_block">
+    <ul class="my_order_ul">
+        <li>
+            <a class="my_order_list">
+                <img src="img/icon_59.png" class="icon_59"/>
+                我的订单
+                <div class="my_order_right">
+                    <img src="img/icon_17.png" class="icon_17_4"/>
+                    <span>查看全部订单</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="my_order_tools">
+        <ul>
+            <li><a href="#"><img src="img/icon_63.png" class="icon_63"/>
+                <p>待修理</p><span id="my_xiuli" class="my_notice">0</span></a></li>
+            <li><a href="#"><img src="img/icon_64.png" class="icon_64"/>
+                <p>待付款</p><span id="my_pay" class="my_notice">0</span></a></li>
+            <li><a href="#"><img src="img/icon_65.png" class="icon_64"/>
+                <p>待评价</p><span id="my_pj" class="my_notice">0</span></a></li>
+        </ul>
+        <div class="clearfloat"></div>
+    </div>
+</div>
+
+<div class="my_order_block">
+    <ul id="my_car_list" class="my_order_ul">
+        <li>
+            <a href="#">
+                <img src="img/icon_60.png" class="icon_60"/>
+                我的车辆
+                <div class="my_order_right">
+                    <img src="img/icon_17.png" class="icon_17_4"/>
+                    <span>共一辆</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="my_order_block">
+    <ul class="my_order_ul">
+        <li style="border-bottom:1px solid #bfbfbf;">
+            <a class="my_tousu">
+                <img src="img/icon_61.png" class="icon_59"/>
+                意见反馈与投诉
+                <div class="my_order_right">
+                    <img src="img/icon_17.png" class="icon_17_4"/>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="我的-关于我们.html">
+                <img src="img/icon_62.png" class="icon_62"/>
+                关于我们
+                <div class="my_order_right">
+                    <img src="img/icon_17.png" class="icon_17_4"/>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="index_footer_block">
+    <ul class="index_footer_ul">
+        <li><a href="index.html"><img src="img/icon_18.png" alt="养车" class="icon_18"/>
+            <p>养车</p></a></li>
+        <li><a href="门店列表.html"><img src="img/icon_19.png" alt="门店" class="icon_19"/>
+            <p>门店</p></a></li>
+        <li><a href="养车日历.html"><img src="img/icon_20.png" alt="日历" class="icon_20"/>
+            <p>日历</p></a></li>
+        <li><a href="我的.html" class="footer_selected"><img src="img/icon_25.png" alt="我的" class="icon_21"/>
+            <p>我的</p></a></li>
+    </ul>
+    <div class="clearfloat"></div>
+</div>
 
 </body>
 </html>

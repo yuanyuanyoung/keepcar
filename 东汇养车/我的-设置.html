@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
-   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-   	<script src="js/common.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
     <title>我的设置</title>
-    
+
 </head>
 <body style="padding-bottom:150px;">
-	<div class="common_head_block" style="width:auto;">
-		<a href="我的.html" class="head_icon_back"><img src="img/icon_26.png" alt="后退" class="icon_26"/></a>
-		<span class="title_name">设置</span>
-	</div>
-	
-	
-	<div class="my_order_block">
-		<ul class="my_order_ul">
-			<li style="border-bottom:1px solid #bfbfbf;">
-				<a href="#">
-					清空本地缓存
-					<div class="my_order_right">
-						<span>129M,点击情况</span>			
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					版本号
-					<div class="my_order_right">
-						<span>1.0.2</span>				
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
-	
-	<button type="button" class="btn_cancel_login" onclick="location.href='login.html'">退出登录</button>
+<div class="common_head_block" style="width:auto;">
+    <a href="我的.html" class="head_icon_back"><img src="img/icon_26.png" alt="后退" class="icon_26"/></a>
+    <span class="title_name">设置</span>
+</div>
 
+
+<div class="my_order_block">
+    <ul class="my_order_ul">
+        <li style="border-bottom:1px solid #bfbfbf;">
+            <a href="#">
+                清空本地缓存
+                <div class="my_order_right">
+                    <span>129M,点击情况</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                版本号
+                <div class="my_order_right">
+                    <span>1.0.2</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<button type="button" class="btn_cancel_login" >退出登录</button>
+
+
+<script>
+    $(function () {
+        if (localStorage.getItem("isLogin")) {
+            $(".btn_cancel_login").show();
+
+        }else{
+            $(".btn_cancel_login").hide();
+        }
+
+		$(".btn_cancel_login").click(function(){//退出登录
+
+            localStorage.removeItem("personData");
+            localStorage.removeItem("isLogin");
+            $(".btn_cancel_login").hide();
+            location.href='login.html';
+
+        });
+
+    });
+
+
+</script>
 </body>
 </html>
