@@ -247,7 +247,7 @@
 
 .fc-calendar .fc-row > div > div a,
 .fc-calendar .fc-row > div > div span {
-	display: ;
+	//display: ;
 	font-size: 2.6vw;
 	-webkit-text-size-adjust:none;
 	width:40%;

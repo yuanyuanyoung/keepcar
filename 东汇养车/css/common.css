@@ -365,7 +365,7 @@ body.login_bg {background:#333;padding-bottom:10vh;}
 .order_price_box {width:91%;padding:4% 3% 4% 6%;border-top:1px solid #e1e1e1;font-size:3.8vw;color:#4e4e4e;}
 .order_price_box span {font-size:3.8vw;color:#f25353;}
 .order_price_box button {padding:1%;background:#fff;border:1px solid #f25353;border-radius: 5px;color:#f25353;float:right;margin-top:-2%;font-family: "微软雅黑";font-size:3.2vw;outline:none;}
-.service_detail_time {width::94%;padding:3%;font-size:4vw;color:#333;background:#fff;margin-top:10px;border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;}
+.service_detail_time {width:94%;padding:3%;font-size:4vw;color:#333;background:#fff;margin-top:10px;border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;}
 .service_detail_time span {float:right;font-size:3.5vw;color:#adadad;}
 .order_detail_summary {width:100%;position:fixed;bottom:0px;left:0px;border-top:1px solid #e1e1e1;background:#fff;z-index:2;}
 .order_price_detail {width:94%;padding:3%;border-bottom:1px solid #e1e1e1;}
