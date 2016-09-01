@@ -1,210 +1,346 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-   	<link rel="stylesheet" type="text/css" href="css/common.css"/>
-   	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-   	<script src="js/common.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
     <title>优惠券</title>
-    
+
 </head>
 <body style="padding-bottom:70px;">
-	<div class="common_head_block">
-		<div class="store_list_left" onclick="location.href='城市选择.html'">
-			<img src="img/icon_32.png" class="icon_32"/>
-			<span>南京</span>
-		</div>
-		<div class="head_input_box_2">
-			<input type="text" placeholder="搜索服务或门店" />
-			<img src="img/icon_6.png" alt="搜索" class="icon_6" />
-		</div>
-	</div>
-	
-	<!--筛选器-->
-	<div class="store_condition_block">
-		<ul class="store_condition_ul">
-			<li class="condition_li condition_show_li"><span>智能排序</span><img src="img/icon_37.png" class="icon_36" /></li>
-			<ul class="condition_ul_next">
-				<li class="condition_selected"><img src="img/icon_38.png" class="icon_39" />智能排序</li>
-				<li><img src="img/icon_39.png" class="icon_39" />离我最近</li>
-				<li><img src="img/icon_39.png" class="icon_39" />订单最多</li>
-				<li><img src="img/icon_39.png" class="icon_39" />评价最高</li>
-			</ul>
-			<li class="condition_li condition_service_li"><span>服务筛选</span><img src="img/icon_37.png" class="icon_36" /></li>
-			<div class="condition_service_box">
-				<ul class="condition_ul_service">
-					<li onclick="ChangeDiv('0','JKDiv_',4)" class="service_selected">不限</li>
-					<li onclick="ChangeDiv('1','JKDiv_',4)">维修</li>
-					<li onclick="ChangeDiv('2','JKDiv_',4)">保养</li>
-					<li onclick="ChangeDiv('3','JKDiv_',4)">美容</li>
-					<li onclick="ChangeDiv('4','JKDiv_',4)">改装</li>
-				</ul>
-				<div class="tab_box_1">
-			        <div id="JKDiv_0" style="display:;">
-			            
-			        </div> 
-			        <div id="JKDiv_1" style="display:none;">
-			            <ul class="service_detail_li">
-			            	<li>车辆快修</li>
-			            	<li>事故维修</li>
-			            </ul>
-			        </div>
-			        <div id="JKDiv_2" style="display:none;">
-			            <ul class="service_detail_li">
-			            	<li>小保养</li>
-			            	<li>大保养</li>
-			            </ul>
-			        </div>
-			        <div id="JKDiv_3" style="display:none;">
-			            <ul class="service_detail_li">
-			            	<li>普洗</li>
-			            	<li>精洗</li>
-			            	<li>打蜡</li>
-			            </ul>
-			        </div>
-			        <div id="JKDiv_4" style="display:none;">
-			            <ul class="service_detail_li">
-			            	<li>电子加装</li>
-			            	<li>外饰改装</li>
-			            	<li>系统改装</li>
-			            	<li>内饰改装</li>
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<li class="condition_li" style="border:none;" onclick="location.href='综合服务.html'">综合服务…</li>
-		</ul>
-		<div class="clearfloat"></div>
-	</div>
-	<!--筛选器-->
-	
-	<div class="store_list_ul">
-		<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
-			<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
-			<div class="zjdmd_word">
-				<p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.2公里</a></p>
-				<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
-				<p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
-			</div>
-			<div class="store_level_box">
-				<ul>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_34.png" class="icon_33"/></li>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>	
-		</div>
-		
-		<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
-			<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
-			<div class="zjdmd_word">
-				<p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.7公里</a></p>
-				<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
-				<p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
-			</div>
-			<div class="store_level_box">
-				<ul>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_35.png" class="icon_33"/></li>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>	
-		</div>
-		
-		<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
-			<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
-			<div class="zjdmd_word">
-				<p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.9公里</a></p>
-				<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
-				<p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
-			</div>
-			<div class="store_level_box">
-				<ul>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_35.png" class="icon_33"/></li>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>	
-		</div>
-		
-		<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
-			<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
-			<div class="zjdmd_word">
-				<p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">3.2公里</a></p>
-				<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
-				<p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
-			</div>
-			<div class="store_level_box">
-				<ul>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_35.png" class="icon_33"/></li>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>	
-		</div>
-		
-		<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
-			<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
-			<div class="zjdmd_word">
-				<p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">4.2公里</a></p>
-				<p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
-				<p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
-			</div>
-			<div class="store_level_box">
-				<ul>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_33.png" class="icon_33"/></li>
-					<li><img src="img/icon_35.png" class="icon_33"/></li>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>	
-		</div>
-		
-	</div>
-	
-	
-	
-	<div class="index_footer_block">
-		<ul class="index_footer_ul">
-			<li><a href="index.html"><img src="img/icon_18.png" alt="养车" class="icon_18" /><p>养车</p></a></li>
-			<li><a href="门店列表.html" class="footer_selected"><img src="img/icon_23.png" alt="门店" class="icon_19" /><p>门店</p></a></li>
-			<li><a href="养车日历.html"><img src="img/icon_20.png" alt="日历" class="icon_20" /><p>日历</p></a></li>
-			<li><a href="我的.html"><img src="img/icon_21.png" alt="我的" class="icon_21" /><p>我的</p></a></li>
-		</ul>
-		<div class="clearfloat"></div>
-	</div>
-	
-	<div class="onSelect_bg service_bg"></div>
-	
-	
+<div class="common_head_block">
+    <div class="store_list_left" onclick="location.href='城市选择.html'">
+        <img src="img/icon_32.png" class="icon_32"/>
+        <span>南京</span>
+    </div>
+    <div class="head_input_box_2">
+        <input type="text" placeholder="搜索服务或门店"/>
+        <img src="img/icon_6.png" alt="搜索" class="icon_6"/>
+    </div>
+</div>
+
+<!--筛选器-->
+<div class="store_condition_block">
+    <ul class="store_condition_ul">
+        <li class="condition_li condition_show_li"><span>智能排序</span><img src="img/icon_37.png" class="icon_36"/></li>
+        <ul class="condition_ul_next">
+            <li class="condition_selected"><img src="img/icon_38.png" class="icon_39"/>智能排序</li>
+            <li><img src="img/icon_39.png" class="icon_39"/>离我最近</li>
+            <li><img src="img/icon_39.png" class="icon_39"/>订单最多</li>
+            <li><img src="img/icon_39.png" class="icon_39"/>评价最高</li>
+        </ul>
+        <li class="condition_li condition_service_li"><span>服务筛选</span><img src="img/icon_37.png" class="icon_36"/></li>
+        <div class="condition_service_box">
+            <ul class="condition_ul_service">
+                <li onclick="ChangeDiv('0','JKDiv_',4)" class="service_selected">不限</li>
+                <li onclick="ChangeDiv('1','JKDiv_',4)">维修</li>
+                <li onclick="ChangeDiv('2','JKDiv_',4)">保养</li>
+                <li onclick="ChangeDiv('3','JKDiv_',4)">美容</li>
+                <li onclick="ChangeDiv('4','JKDiv_',4)">改装</li>
+            </ul>
+            <div class="tab_box_1">
+                <div id="JKDiv_0" style="display:;">
+
+                </div>
+                <div id="JKDiv_1" style="display:none;">
+                    <ul class="service_detail_li">
+                        <li>车辆快修</li>
+                        <li>事故维修</li>
+                    </ul>
+                </div>
+                <div id="JKDiv_2" style="display:none;">
+                    <ul class="service_detail_li">
+                        <li>小保养</li>
+                        <li>大保养</li>
+                    </ul>
+                </div>
+                <div id="JKDiv_3" style="display:none;">
+                    <ul class="service_detail_li">
+                        <li>普洗</li>
+                        <li>精洗</li>
+                        <li>打蜡</li>
+                    </ul>
+                </div>
+                <div id="JKDiv_4" style="display:none;">
+                    <ul class="service_detail_li">
+                        <li>电子加装</li>
+                        <li>外饰改装</li>
+                        <li>系统改装</li>
+                        <li>内饰改装</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <li class="condition_li" style="border:none;" onclick="location.href='综合服务.html'">综合服务…</li>
+    </ul>
+    <div class="clearfloat"></div>
+</div>
+<!--筛选器-->
+
+<!--<div class="store_list_ul">
+    <div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
+        <img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+        <div class="zjdmd_word">
+            <p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.2公里</a></p>
+            <p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+            <p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
+        </div>
+        <div class="store_level_box">
+            <ul>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_34.png" class="icon_33"/></li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+
+    <div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
+        <img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+        <div class="zjdmd_word">
+            <p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.7公里</a></p>
+            <p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+            <p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
+        </div>
+        <div class="store_level_box">
+            <ul>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_35.png" class="icon_33"/></li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+
+    <div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
+        <img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+        <div class="zjdmd_word">
+            <p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">2.9公里</a></p>
+            <p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+            <p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
+        </div>
+        <div class="store_level_box">
+            <ul>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_35.png" class="icon_33"/></li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+
+    <div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
+        <img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+        <div class="zjdmd_word">
+            <p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">3.2公里</a></p>
+            <p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+            <p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
+        </div>
+        <div class="store_level_box">
+            <ul>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_33.png" class="icon_33"/></li>
+                <li><img src="img/icon_35.png" class="icon_33"/></li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </div>-->
+
+<!--<div class="store_list_box" onclick="location.href='门店-店铺服务.html'">
+<img src="img/img_2.png" alt="东汇快修苏客加盟店（河西分店）" class="img_2" />
+<div class="zjdmd_word">
+    <p class="zjdmd_name">东汇快修苏客加盟店...<a href="javascript:void(0);" class="store_distance">4.2公里</a></p>
+    <p class="zjdmd_address">建邺区庐山路2号新地中心二期B2</p>
+    <p class="zjdmd_label"><span>快修</span><span>小保养</span><span>普洗</span><span>精洗</span><span>打蜡</span><span>外观改造</span><span>内饰改装</span></p>
+</div>
+<div class="store_level_box">
+    <ul>
+        <li><img src="img/icon_33.png" class="icon_33"/></li>
+        <li><img src="img/icon_33.png" class="icon_33"/></li>
+        <li><img src="img/icon_33.png" class="icon_33"/></li>
+        <li><img src="img/icon_33.png" class="icon_33"/></li>
+        <li><img src="img/icon_35.png" class="icon_33"/></li>
+    </ul>
+</div>
+<div class="clearfloat"></div>
+</div>
+</div>-->
+<ul class="store_list">
+</ul>
+
+<button style="background: pink; height:50px;width: 100%;color: white;" class="load_more"> 加载更多。。。。</button>
+
+<div class="index_footer_block">
+    <ul class="index_footer_ul">
+        <li><a href="index.html"><img src="img/icon_18.png" alt="养车" class="icon_18"/>
+            <p>养车</p></a></li>
+        <li><a href="门店列表.html" class="footer_selected"><img src="img/icon_23.png" alt="门店" class="icon_19"/>
+            <p>门店</p></a></li>
+        <li><a href="养车日历.html"><img src="img/icon_20.png" alt="日历" class="icon_20"/>
+            <p>日历</p></a></li>
+        <li><a href="我的.html"><img src="img/icon_21.png" alt="我的" class="icon_21"/>
+            <p>我的</p></a></li>
+    </ul>
+    <div class="clearfloat"></div>
+</div>
+
+<div class="onSelect_bg service_bg"></div>
+
+
 <script>
-	function ChangeDiv(divId,divName,zDivCount) 
-	{ 
-	for(i=0;i<=zDivCount;i++) 
-	{ 
-	document.getElementById(divName+i).style.display="none"; 
-	//将所有的层都隐藏 
-	} 
-	document.getElementById(divName+divId).style.display="block"; 
-	//显示当前层 
-	} 
-</script> 
+    $(function () {
+
+$(".load_more").click(function(){
+    var i=2;
+    $.ajax({
+        url: 'http://gank.io/api/data/福利/5/'+i,
+        async: true,
+        dataType: 'JSON',//加入这个选项即可
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        jsonp: 'jsoncallback',
+        success: function (data) {
+            var orderlist = data.results;
+            for (i = 0; i < orderlist.length; i++) {
+                initdata(orderlist[i]);
+            }
+            i++;
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            alert("失败");
+        }
+    })
+});
+
+        personData = JSON.parse(localStorage.getItem("personData"));
+        $.ajax({
+            url: 'http://gank.io/api/data/福利/5/1',
+            async: true,
+            dataType: 'JSON',//加入这个选项即可
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            jsonp: 'jsoncallback',
+            success: function (data) {
+                var orderlist = data.results;
+                for (i = 0; i < orderlist.length; i++) {
+                    initdata(orderlist[i]);
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert("失败");
+            }
+        })
+        function initdata( item) {
+            var doc = document;
+            var fragment = doc.createDocumentFragment();
+            var container = $(".store_list");
+//            li = doc.createElement("li");
+            div1 = doc.createElement("div");
+            div2 = doc.createElement("div");
+            div3 = doc.createElement("div");
+            div4 = doc.createElement("div");
+            img = doc.createElement("img");`w`
+            p1 = doc.createElement("p");
+            a = doc.createElement("a");
+            p2 = doc.createElement("p");
+            p3 = doc.createElement("p");
+            ul = doc.createElement("ul");
+
+            div1.setAttribute("class", "store_list_box");
+            div1.setAttribute("onclick", "location.href='门店-店铺服务.html'");
+            div2.setAttribute("class", "zjdmd_word");
+            div3.setAttribute("class", "store_level_box");
+            div4.setAttribute("class", "clearfloat");
+            img.setAttribute("src", item.url);
+            img.setAttribute("alt", "东汇快修苏客加盟店（河西分店）");
+            img.setAttribute("class", "img_2");
+            p1.setAttribute("class", "zjdmd_name");
+            p1.innerHTML = item.who;
+            a.setAttribute("class", "store_distance");
+            a.setAttribute("href", "javascript:void(0);");
+            a.innerHTML = "4.2公里";
+            p2.setAttribute("class", "zjdmd_address");
+            p2.innerHTML = "建邺区庐山路2号新地中心二期B2";
+            p3.setAttribute("class", "zjdmd_label")
+            ul.setAttribute("class", "ul_star");
+
+//            li.appendChild(div1);
+            div1.appendChild(img);
+            div1.appendChild(div2);
+            div1.appendChild(div3);
+            div1.appendChild(div4);
+            div2.appendChild(p1);
+            div2.appendChild(p2);
+            div2.appendChild(p3);
+            p1.appendChild(a);
+            for (j = 0; j < 5; j++) {
+                span = doc.createElement("span");
+                span.innerHTML = "HH";
+                p3.appendChild(span);
+            }
+            div3.appendChild(ul);
+
+
+            var fnum = parseFloat("3.5");
+            var k = parseInt("3.5")
+
+
+            for (j = 0; j < k; j++) {
+                li1 = doc.createElement("li");
+                img1 = doc.createElement("img");
+                img1.setAttribute("class", "icon_33");
+                img1.setAttribute("src", "img/icon_33.png");
+                li1.appendChild(img1);
+                ul.appendChild(li1);
+            }
+            for (j = 0; j < (fnum - k); j++) {
+                li1 = doc.createElement("li");
+                img1 = doc.createElement("img");
+                img1.setAttribute("class", "icon_33");
+                img1.setAttribute("src", "img/icon_34.png");
+                li1.appendChild(img1);
+                ul.appendChild(li1);
+            }
+            for (j = 0; j < (5 - fnum - 0.5); j++) {
+                li1 = doc.createElement("li");
+                img1 = doc.createElement("img");
+                img1.setAttribute("class", "icon_33");
+                img1.setAttribute("src", "img/icon_35.png");
+                li1.appendChild(img1);
+                ul.appendChild(li1);
+            }
+            fragment.appendChild(div1);
+            container.append(fragment)
+
+        }
+
+
+    });
+
+
+    function ChangeDiv(divId, divName, zDivCount) {
+        for (i = 0; i <= zDivCount; i++) {
+            document.getElementById(divName + i).style.display = "none";
+            //将所有的层都隐藏
+        }
+        document.getElementById(divName + divId).style.display = "block";
+        //显示当前层
+    }
+
+
+</script>
 </body>
 </html>
